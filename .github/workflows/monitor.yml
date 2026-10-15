@@ -1,0 +1,64 @@
+# A Sloth OS knowledge szolgáltatás figyelése (naponta): válaszol-e a Worker, és működik-e az export.
+# Ha nem, issue nyílik (erről a repó gazdája e-mailt kap); ha újra rendben van, az issue lezárul.
+name: monitor
+
+on:
+  schedule:
+    - cron: "30 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ellenőrzés
+        id: check
+        env:
+          EXPORT_URL: ${{ secrets.EXPORT_URL }}
+          EXPORT_TOKEN: ${{ secrets.EXPORT_TOKEN }}
+        run: |
+          problems=""
+          base="${EXPORT_URL%/v1/export}"
+          if ! curl -fsS --retry 3 --max-time 30 "$base/" | jq -e '.service == "Sloth OS knowledge"' > /dev/null; then
+            problems="$problems- A Worker nem válaszol: $base/"$'\n'
+          fi
+          # rossz jelentést el kell utasítania (az ellenőrzés működik)
+          code=$(curl -s -o /dev/null -w '%{http_code}' --max-time 30 -X POST "$base/v1/report" \
+                 -H 'content-type: application/json' -d '{"bad": true}')
+          if [ "$code" != "400" ]; then
+            problems="$problems- A jelentések ellenőrzése nem a várt választ adja (HTTP $code, várt: 400)"$'\n'
+          fi
+          if ! curl -fsS --retry 3 --max-time 60 -H "Authorization: Bearer $EXPORT_TOKEN" "$EXPORT_URL" \
+               | jq -e '.version == 1 and (.programs | type == "object")' > /dev/null; then
+            problems="$problems- Az export nem működik (az adatbázis vagy a titkos kulcs gondja lehet)"$'\n'
+          fi
+          {
+            echo "problems<<EOF"
+            printf '%s' "$problems"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Issue nyitása vagy lezárása
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PROBLEMS: ${{ steps.check.outputs.problems }}
+        run: |
+          title="A közös tudás szolgáltatása nem működik"
+          open=$(gh issue list -R "$GITHUB_REPOSITORY" --state open --search "\"$title\" in:title" --json number --jq '.[0].number')
+          if [ -n "$PROBLEMS" ]; then
+            body=$(printf 'A napi ellenőrzés hibát talált (%s):\n\n%s\nA gépek közben a GitHubról olvassák a már összegyűlt tudást, a jelentéseiket pedig sorban tartják és később elküldik, tehát a felhasználók ebből nem vesznek észre semmit.\n\nRészletek: %s/%s/actions/runs/%s' \
+                   "$(date -u +%F)" "$PROBLEMS" "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY" "$GITHUB_RUN_ID")
+            if [ -n "$open" ]; then
+              gh issue comment "$open" -R "$GITHUB_REPOSITORY" --body "$body"
+            else
+              gh issue create -R "$GITHUB_REPOSITORY" --title "$title" --body "$body"
+            fi
+            exit 1
+          elif [ -n "$open" ]; then
+            gh issue close "$open" -R "$GITHUB_REPOSITORY" --comment "Újra rendben van ($(date -u +%F))."
+          fi
+          echo "Minden rendben."
