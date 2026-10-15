@@ -34,7 +34,12 @@ jobs:
           curl -fsS --retry 3 --max-time 60 -H "Authorization: Bearer $EXPORT_TOKEN" "$EXPORT_URL" -o new.json
           # csak érvényes, várt szerkezetű fájl kerülhet ki (a gépek ezt töltik le)
           jq -e '.version == 1 and (.programs | type == "object")' new.json > /dev/null
-          jq -S --indent 1 . new.json > knowledge.json
+          # a ProtonDB-ből összesített játékok (games.json, havonta frissül) mellé
+          if [ -f games.json ]; then
+            jq -S --indent 1 -s '.[0] + .[1]' new.json games.json > knowledge.json
+          else
+            jq -S --indent 1 . new.json > knowledge.json
+          fi
           rm new.json
 
       - name: Commit, ha változott (és havonta életjel, hogy a GitHub ne kapcsolja ki az ütemezést)

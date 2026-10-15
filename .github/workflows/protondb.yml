@@ -1,0 +1,51 @@
+# A ProtonDB nyílt adataiból (ODbL) a közös tudás alapja: havonta, az új adatkiadás után (seed/protondb.py)
+name: protondb
+
+on:
+  schedule:
+    - cron: "40 4 3 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: export
+  cancel-in-progress: false
+
+jobs:
+  seed:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: A legfrissebb ProtonDB-kiadás letöltése
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          name=$(gh api repos/bdefore/protondb-data/contents/reports --jq '.[].name' | python3 -c '
+          import re, sys
+          months = "jan feb mar apr may jun jul aug sep oct nov dec".split()
+          def key(n):
+              m = re.match(r"reports_([a-z]{3})(\d+)_(\d{4})\.tar\.gz$", n)
+              return (int(m.group(3)), months.index(m.group(1)), int(m.group(2))) if m else (0, 0, 0)
+          print(max(sys.stdin.read().split(), key=key))')
+          echo "Kiadás: $name"
+          mkdir -p /tmp/protondb
+          curl -fsSL --retry 3 -o /tmp/protondb/reports.tar.gz \
+            "https://raw.githubusercontent.com/bdefore/protondb-data/master/reports/$name"
+          tar xzf /tmp/protondb/reports.tar.gz -C /tmp/protondb
+
+      - name: Összesítés
+        run: |
+          python3 seed/protondb.py /tmp/protondb/reports_piiremoved.json games.json
+          jq -e '.games | type == "object"' games.json > /dev/null
+          jq -S --indent 1 -s '{version: 1, programs: (.[0].programs // {})} + .[1]' knowledge.json games.json > merged.json
+          mv merged.json knowledge.json
+
+      - name: Commit, ha változott
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add games.json knowledge.json
+          git diff --cached --quiet || { git commit -m "ProtonDB-adatok frissítése"; git push; }
