@@ -1,0 +1,51 @@
+# A közös tudás összesítésének frissítése a Sloth OS knowledge szolgáltatásból (óránként).
+# Titkok: EXPORT_URL (https://<worker>/v1/export) és EXPORT_TOKEN.
+name: export
+
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: export
+  cancel-in-progress: false
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Összesítés letöltése
+        env:
+          EXPORT_URL: ${{ secrets.EXPORT_URL }}
+          EXPORT_TOKEN: ${{ secrets.EXPORT_TOKEN }}
+        run: |
+          if [ -z "$EXPORT_URL" ] || [ -z "$EXPORT_TOKEN" ]; then
+            echo "A titkok még nincsenek beállítva, kihagyva."
+            exit 0
+          fi
+          curl -fsS --retry 3 --max-time 60 -H "Authorization: Bearer $EXPORT_TOKEN" "$EXPORT_URL" -o new.json
+          # csak érvényes, várt szerkezetű fájl kerülhet ki (a gépek ezt töltik le)
+          jq -e '.version == 1 and (.programs | type == "object")' new.json > /dev/null
+          jq -S --indent 1 . new.json > knowledge.json
+          rm new.json
+
+      - name: Commit, ha változott (és havonta életjel, hogy a GitHub ne kapcsolja ki az ütemezést)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet knowledge.json; then
+            git add knowledge.json
+            git commit -m "Közös tudás frissítése"
+            git push
+          elif [ $(( $(date +%s) - $(git log -1 --format=%ct) )) -gt $(( 30 * 86400 )) ]; then
+            git commit --allow-empty -m "Életjel (az ütemezett frissítés aktív marad)"
+            git push
+          fi
