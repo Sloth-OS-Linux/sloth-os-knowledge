@@ -1,0 +1,26 @@
+# A receptek (recipes.json) ellenőrzése minden változásnál és PR-nál: csak engedélyezett mezők és értékek
+# lehetnek benne (seed/validate_recipes.py, ugyanazok a szabályok, mint a Sloth OS gépeken).
+name: recipes
+
+on:
+  push:
+    paths:
+      - "recipes.json"
+      - "seed/validate_recipes.py"
+      - ".github/workflows/recipes.yml"
+  pull_request:
+    paths:
+      - "recipes.json"
+      - "seed/validate_recipes.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Receptek ellenőrzése
+        run: python3 seed/validate_recipes.py recipes.json

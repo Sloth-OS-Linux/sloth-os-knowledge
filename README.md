@@ -42,10 +42,42 @@ it worked on at least 3 different machines with a success rate of at least 75%. 
 are accepted (Proton line, profile, a fixed list of Proton on/off switches and components), both by the
 service and by the machines that read this file.
 
+## Recipes
+
+`recipes.json` holds hand-curated settings for well-known launchers and programs (Battle.net, Epic Games
+Launcher, GOG Galaxy, Ubisoft Connect…), as data rather than code: which short-lived launcher should be replaced
+by its client, which `.exe` belongs in the Start menu and which helpers to skip, plus components, Proton switches,
+program arguments and DLL overrides. Sloth OS ships a copy and downloads this file in the background; the newer
+one (`updated`) wins.
+
+Only allowlisted fields and values are accepted, both by the `recipes` workflow (`seed/validate_recipes.py`, on
+every push and pull request) and again by every Sloth OS machine: no arbitrary commands, environment variables,
+arguments or native DLL loading. A recipe that fails the check is ignored; the others keep working.
+
+```json
+{
+ "version": 1,
+ "updated": "2026-10-19",
+ "recipes": [
+  {
+   "id": "battlenet",
+   "name": "Battle.net",
+   "match": {"dirs": ["Program Files (x86)/Battle.net"], "exe": ["battle.net*.exe"]},
+   "stubs": {"battle.net launcher.exe": "Battle.net.exe"},
+   "prefer": ["battle.net launcher.exe"],
+   "skip": ["battle.net uninstaller.exe"],
+   "dll_overrides": ["locationapi=d"]
+  }
+ ]
+}
+```
+
+To add or change a recipe, open a pull request and bump `updated`.
+
 ## License
 
 `knowledge.json` and `games.json` contain data derived from the ProtonDB data dump, which is made available
 under the [Open Database License (ODbL) 1.0](https://opendatacommons.org/licenses/odbl/1-0/); individual
 contents under the [Database Contents License](https://opendatacommons.org/licenses/dbcl/1-0/). Accordingly,
 these files are also made available under the ODbL 1.0. Data source: ProtonDB, https://www.protondb.com.
-The scripts and workflows in this repository are available under the MIT License.
+The scripts and workflows in this repository, and `recipes.json`, are available under the MIT License.
