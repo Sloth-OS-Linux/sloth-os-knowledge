@@ -1,6 +1,6 @@
 # Sloth OS knowledge
 
-`knowledge.json` lists which settings make Windows programs start on [Sloth OS](https://github.com/bathorizsolt),
+`knowledge.json` lists which settings make Windows programs start on [Sloth OS](https://github.com/Sloth-OS-Linux/sloth-os),
 learned from anonymous reports of Sloth OS machines whose users turned on
 *Sloth Center → Windows programs → Share experiences*.
 
