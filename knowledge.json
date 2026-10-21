@@ -3412,7 +3412,16 @@
    }
   }
  },
- "programs": {},
+ "programs": {
+  "a075265c26931933952b7eaca8c28486ad857c471fbd1902c5f1d7ba91ef35ba": {
+   "intel": {
+    "fixes": [],
+    "line": "UMU-Proton",
+    "machines": 3,
+    "profile": "default"
+   }
+  }
+ },
  "source": "ProtonDB (https://www.protondb.com), Open Database License (ODbL) 1.0",
  "version": 1
 }
