@@ -5,7 +5,8 @@
   reports of the last two years, per Steam game, how many say it works, per GPU vendor too, and how many played the
   game's own Linux version;
 - AreWeAntiCheatYet (https://areweanticheatyet.com, MIT): which games' anti-cheat blocks Linux ("Denied": the makers
-  do not allow it; "Broken": it does not work), also games that are not on Steam;
+  do not allow it; "Broken": it does not work), also games that are not on Steam; for the "Denied" ones on Steam
+  the publisher from the Steam store, so Sloth Center can say whom to ask;
 - sloth-tested.json (this repository, edited by hand): the games the Sloth OS team tried itself.
 
 The rating is our own, simple and readable (Sloth Center explains it the same way):
@@ -23,6 +24,7 @@ import re
 import sys
 import time
 import unicodedata
+import urllib.request
 
 YEARS = 2
 MIN_REPORTS = 3
@@ -82,6 +84,55 @@ def protondb(path, cut):
     return games
 
 
+# The big publishers by the domain of the game's web page (AreWeAntiCheatYet "url"), for the blocked games that are
+# not on Steam or whose store page does not say
+PUBLISHER_DOMAINS = {
+    "roblox.com": "Roblox",
+    "ea.com": "EA", "riotgames.com": "Riot Games", "playvalorant.com": "Riot Games", "leagueoflegends.com": "Riot Games",
+    "2xko.riotgames.com": "Riot Games", "epicgames.com": "Epic Games", "fortnite.com": "Epic Games",
+    "activision.com": "Activision", "callofduty.com": "Activision", "blizzard.com": "Blizzard",
+    "ubisoft.com": "Ubisoft", "bungie.net": "Bungie", "destinythegame.com": "Bungie",
+    "rockstargames.com": "Rockstar Games", "battlefield.com": "EA", "easports.com": "EA",
+}
+
+
+# ...and by the start of the game's name, when there is no web page either
+PUBLISHER_NAMES = {
+    "ea sports": "EA", "battlefield": "EA", "f1": "EA", "skate.": "EA", "apex legends": "EA",
+    "grand theft auto": "Rockstar Games", "red dead": "Rockstar Games",
+    "teamfight tactics": "Riot Games", "2xko": "Riot Games", "valorant": "Riot Games", "league of legends": "Riot Games",
+    "fortnite": "Epic Games", "roblox": "Roblox", "call of duty": "Activision", "destiny": "Bungie",
+}
+
+
+def publisher_by_name(name):
+    low = clean_name(name).lower()
+    return next((p for prefix, p in PUBLISHER_NAMES.items() if low.startswith(prefix)), "")
+
+
+def publisher_by_url(url):
+    host = re.sub(r"^https?://", "", str(url or "")).split("/", 1)[0].lower()
+    host = host[4:] if host.startswith("www.") else host
+    for domain, name in PUBLISHER_DOMAINS.items():
+        if host == domain or host.endswith("." + domain):
+            return name
+    return ""
+
+
+def publisher(appid):
+    """The game's publisher from the Steam store (only for the games whose makers block Linux: Sloth Center says
+    whom to ask). "" if it cannot be read; the list is made without it then."""
+    url = f"https://store.steampowered.com/api/appdetails?appids={appid}"
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "sloth-os-knowledge"})
+        with urllib.request.urlopen(req, timeout=20) as resp:
+            data = json.load(resp).get(str(appid)) or {}
+    except (OSError, ValueError):
+        return ""
+    names = (data.get("data") or {}).get("publishers") or [] if data.get("success") else []
+    return clean_name(names[0]) if names else ""
+
+
 def main(reports_path, awacy_path, tested_path, out_path):
     cut = time.time() - YEARS * 365 * 86400
     stats = protondb(reports_path, cut)
@@ -113,6 +164,14 @@ def main(reports_path, awacy_path, tested_path, out_path):
         anticheats = [clean_name(a) for a in game.get("anticheats") or [] if a]
         if anticheats:
             entry["ac"] = anticheats[:3]
+        if state == "denied":
+            name = ""
+            if steam_id.isdigit():
+                name = publisher(steam_id)
+                time.sleep(0.5)  # gently: the store answers a few requests per second
+            name = name or publisher_by_url(game.get("url")) or publisher_by_name(game.get("name"))
+            if name:
+                entry["p"] = name
     for key, test in tested.items():
         if not isinstance(test, dict) or test.get("result") not in ("works", "issues", "no"):
             continue

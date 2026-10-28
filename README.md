@@ -51,7 +51,8 @@ runs. It is made monthly by the `protondb` workflow (`seed/games_index.py`) from
   game works (in total and per GPU vendor), and whether most played its own Linux version. Rating: `great` if at
   least 85% say it works, `ok` if at least half, `poor` below that, empty with fewer than 3 reports.
 - **[AreWeAntiCheatYet](https://areweanticheatyet.com)** (MIT): games whose anti-cheat blocks Linux (`denied`: the
-  makers do not allow it; `broken`: it does not work) or works (`supported`, `running`).
+  makers do not allow it; `broken`: it does not work) or works (`supported`, `running`). For the `denied` ones`n  the publisher (`p`) comes from the Steam store, or from the game's web page or name (a short list in the script),
+  so Sloth Center can say whom to ask.
 - **`sloth-tested.json`**: games the Sloth OS team tried itself (edit it by hand, in the GitHub web editor too):
 
 ```json
