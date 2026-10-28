@@ -42,6 +42,24 @@ it worked on at least 3 different machines with a success rate of at least 75%. 
 are accepted (Proton line, profile, a fixed list of Proton on/off switches and components), both by the
 service and by the machines that read this file.
 
+## "Will it run?" game list
+
+`games-index.json` is the list behind *Sloth Center → Games → Will it run?*: type a game's name and see how well it
+runs. It is made monthly by the `protondb` workflow (`seed/games_index.py`) from:
+
+- **ProtonDB** reports of the last two years ([ODbL](https://opendatacommons.org/licenses/odbl/)): how many say the
+  game works (in total and per GPU vendor), and whether most played its own Linux version. Rating: `great` if at
+  least 85% say it works, `ok` if at least half, `poor` below that, empty with fewer than 3 reports.
+- **[AreWeAntiCheatYet](https://areweanticheatyet.com)** (MIT): games whose anti-cheat blocks Linux (`denied`: the
+  makers do not allow it; `broken`: it does not work) or works (`supported`, `running`).
+- **`sloth-tested.json`**: games the Sloth OS team tried itself (edit it by hand, in the GitHub web editor too):
+
+```json
+{"version": 1, "games": {"steam:1245620": {"name": "ELDEN RING", "result": "works", "date": "2026-10-28"}}}
+```
+
+`result` is `works`, `issues` or `no`; the key is `steam:<AppID>`, or `awacy:<slug>` for a game not on Steam.
+
 ## Recipes
 
 `recipes.json` holds hand-curated settings for well-known launchers and programs (Battle.net, Epic Games

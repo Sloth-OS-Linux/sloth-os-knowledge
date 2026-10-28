@@ -43,9 +43,18 @@ jobs:
           jq -S --indent 1 -s '{version: 1, programs: (.[0].programs // {})} + .[1]' knowledge.json games.json > merged.json
           mv merged.json knowledge.json
 
+      # Sloth Center's "Will it run?" check: the game list with a rating, the GPU vendors, and the anti-cheat state
+      # from AreWeAntiCheatYet (MIT) (seed/games_index.py)
+      - name: Game list for the "Will it run?" check
+        run: |
+          curl -fsSL --retry 3 -o /tmp/awacy.json \
+            https://raw.githubusercontent.com/AreWeAntiCheatYet/AreWeAntiCheatYet/master/games.json
+          python3 seed/games_index.py /tmp/protondb/reports_piiremoved.json /tmp/awacy.json sloth-tested.json games-index.json
+          jq -e '.games | length > 1000' games-index.json > /dev/null
+
       - name: Commit, ha változott
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add games.json knowledge.json
+          git add games.json knowledge.json games-index.json
           git diff --cached --quiet || { git commit -m "ProtonDB-adatok frissítése"; git push; }
