@@ -1,22 +1,35 @@
 {
+ "disputed": {},
  "games": {
   "umu-1003480": {
    "any": {
     "fixes": [],
+    "last": "2026-03",
     "line": "UMU-Proton",
     "profile": "wined3d",
     "reports": 4
    },
    "intel": {
     "fixes": [],
+    "last": "2026-03",
     "line": "UMU-Proton",
     "profile": "wined3d",
+    "reports": 4
+   }
+  },
+  "umu-1017180": {
+   "amd": {
+    "fixes": [],
+    "last": "2025-06",
+    "line": "GE-Proton",
+    "profile": "default",
     "reports": 4
    }
   },
   "umu-1029780": {
    "nvidia": {
     "fixes": [],
+    "last": "2026-06",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 5
@@ -25,12 +38,7 @@
   "umu-1034140": {
    "any": {
     "fixes": [],
-    "line": "GE-Proton",
-    "profile": "default",
-    "reports": 4
-   },
-   "nvidia": {
-    "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -39,6 +47,7 @@
   "umu-1034860": {
    "any": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 5
@@ -47,6 +56,7 @@
   "umu-1040730": {
    "any": {
     "fixes": [],
+    "last": "2026-01",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -55,18 +65,21 @@
   "umu-1056640": {
    "amd": {
     "fixes": [],
+    "last": "2026-03",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 7
    },
    "any": {
     "fixes": [],
+    "last": "2026-06",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 19
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-06",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 11
@@ -75,37 +88,23 @@
   "umu-1056720": {
    "any": {
     "fixes": [],
+    "last": "2026-09",
     "line": "UMU-Proton",
     "profile": "wined3d",
     "reports": 3
    },
    "intel": {
     "fixes": [],
+    "last": "2026-09",
     "line": "UMU-Proton",
     "profile": "wined3d",
-    "reports": 3
-   }
-  },
-  "umu-1076160": {
-   "any": {
-    "fixes": [
-     [
-      "verb",
-      "d3dcompiler_47"
-     ],
-     [
-      "verb",
-      "dotnet48"
-     ]
-    ],
-    "line": "GE-Proton",
-    "profile": "default",
     "reports": 3
    }
   },
   "umu-1097150": {
    "nvidia": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 14
@@ -114,18 +113,21 @@
   "umu-1105510": {
    "amd": {
     "fixes": [],
+    "last": "2026-09",
     "line": "GE-Proton",
     "profile": "default",
-    "reports": 9
+    "reports": 8
    },
    "any": {
     "fixes": [],
+    "last": "2026-09",
     "line": "GE-Proton",
     "profile": "default",
-    "reports": 14
+    "reports": 13
    },
    "nvidia": {
     "fixes": [],
+    "last": "2025-06",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
@@ -134,12 +136,14 @@
   "umu-1112400": {
    "amd": {
     "fixes": [],
+    "last": "2025-02",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    },
    "any": {
     "fixes": [],
+    "last": "2025-02",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -148,6 +152,7 @@
   "umu-1114150": {
    "nvidia": {
     "fixes": [],
+    "last": "2026-09",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 6
@@ -156,18 +161,21 @@
   "umu-1144400": {
    "amd": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 8
    },
    "any": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 11
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-09",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -176,12 +184,14 @@
   "umu-1147550": {
    "any": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 11
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 7
@@ -190,12 +200,14 @@
   "umu-11480": {
    "any": {
     "fixes": [],
+    "last": "2025-11",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    },
    "nvidia": {
     "fixes": [],
+    "last": "2025-11",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -209,6 +221,7 @@
       "gdiplus"
      ]
     ],
+    "last": "2026-10",
     "line": "UMU-Proton",
     "profile": "default",
     "reports": 4
@@ -220,6 +233,7 @@
       "gdiplus"
      ]
     ],
+    "last": "2026-10",
     "line": "UMU-Proton",
     "profile": "default",
     "reports": 7
@@ -231,6 +245,7 @@
       "gdiplus"
      ]
     ],
+    "last": "2025-11",
     "line": "UMU-Proton",
     "profile": "default",
     "reports": 3
@@ -239,12 +254,14 @@
   "umu-1170950": {
    "any": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 5
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -253,36 +270,50 @@
   "umu-1175830": {
    "amd": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    }
   },
-  "umu-1192900": {
-   "any": {
-    "fixes": [],
-    "line": "GE-Proton",
-    "profile": "default",
-    "reports": 3
-   }
-  },
-  "umu-1202540": {
+  "umu-1181550": {
    "amd": {
     "fixes": [],
+    "last": "2026-07",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    },
    "any": {
     "fixes": [],
+    "last": "2026-07",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
    }
   },
+  "umu-1192900": {
+   "any": {
+    "fixes": [],
+    "last": "2026-04",
+    "line": "GE-Proton",
+    "profile": "default",
+    "reports": 3
+   }
+  },
+  "umu-1202540": {
+   "any": {
+    "fixes": [],
+    "last": "2026-10",
+    "line": "GE-Proton",
+    "profile": "default",
+    "reports": 3
+   }
+  },
   "umu-1206560": {
    "any": {
     "fixes": [],
+    "last": "2025-04",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -291,6 +322,7 @@
   "umu-1222670": {
    "intel": {
     "fixes": [],
+    "last": "2026-07",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 8
@@ -299,6 +331,7 @@
   "umu-1229490": {
    "intel": {
     "fixes": [],
+    "last": "2026-07",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 6
@@ -307,34 +340,32 @@
   "umu-1230530": {
    "amd": {
     "fixes": [],
+    "last": "2026-02",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 6
    }
   },
   "umu-1256670": {
-   "amd": {
-    "fixes": [],
-    "line": "GE-Proton",
-    "profile": "default",
-    "reports": 3
-   },
    "any": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
-    "reports": 6
+    "reports": 5
    }
   },
   "umu-1277930": {
    "amd": {
     "fixes": [],
+    "last": "2026-07",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
    },
    "any": {
     "fixes": [],
+    "last": "2026-07",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
@@ -343,12 +374,14 @@
   "umu-1282270": {
    "intel": {
     "fixes": [],
+    "last": "2026-02",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 26
@@ -357,6 +390,7 @@
   "umu-1283410": {
    "nvidia": {
     "fixes": [],
+    "last": "2026-07",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -365,12 +399,14 @@
   "umu-1293820": {
    "amd": {
     "fixes": [],
+    "last": "2026-05",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
    },
    "any": {
     "fixes": [],
+    "last": "2026-05",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 6
@@ -379,12 +415,14 @@
   "umu-1340140": {
    "amd": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 10
    },
    "any": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 11
@@ -393,14 +431,7 @@
   "umu-1340990": {
    "amd": {
     "fixes": [],
-    "line": "GE-Proton",
-    "profile": "default",
-    "reports": 3
-   }
-  },
-  "umu-13500": {
-   "any": {
-    "fixes": [],
+    "last": "2025-12",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -409,6 +440,7 @@
   "umu-13530": {
    "any": {
     "fixes": [],
+    "last": "2026-01",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -417,18 +449,21 @@
   "umu-1358700": {
    "amd": {
     "fixes": [],
+    "last": "2026-01",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    },
    "any": {
     "fixes": [],
+    "last": "2026-06",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 6
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-06",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -437,6 +472,7 @@
   "umu-1369630": {
    "nvidia": {
     "fixes": [],
+    "last": "2026-04",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
@@ -445,18 +481,21 @@
   "umu-1382330": {
    "amd": {
     "fixes": [],
+    "last": "2026-09",
     "line": "GE-Proton",
     "profile": "default",
-    "reports": 18
+    "reports": 15
    },
    "any": {
     "fixes": [],
+    "last": "2026-09",
     "line": "GE-Proton",
     "profile": "default",
-    "reports": 32
+    "reports": 29
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-06",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 14
@@ -465,12 +504,14 @@
   "umu-1392960": {
    "amd": {
     "fixes": [],
+    "last": "2026-01",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
    },
    "any": {
     "fixes": [],
+    "last": "2026-01",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 5
@@ -479,6 +520,7 @@
   "umu-1402020": {
    "any": {
     "fixes": [],
+    "last": "2025-12",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -487,6 +529,7 @@
   "umu-1413480": {
    "nvidia": {
     "fixes": [],
+    "last": "2026-02",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
@@ -495,6 +538,7 @@
   "umu-1422130": {
    "amd": {
     "fixes": [],
+    "last": "2025-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
@@ -503,6 +547,7 @@
   "umu-1426450": {
    "nvidia": {
     "fixes": [],
+    "last": "2025-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -520,6 +565,7 @@
       "d3dx11_43"
      ]
     ],
+    "last": "2026-06",
     "line": "UMU-Proton",
     "profile": "default",
     "reports": 6
@@ -535,6 +581,7 @@
       "d3dx11_43"
      ]
     ],
+    "last": "2026-06",
     "line": "UMU-Proton",
     "profile": "default",
     "reports": 9
@@ -543,12 +590,14 @@
   "umu-1473480": {
    "any": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -557,14 +606,25 @@
   "umu-1476970": {
    "amd": {
     "fixes": [],
+    "last": "2026-07",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 5
    }
   },
+  "umu-1477590": {
+   "any": {
+    "fixes": [],
+    "last": "2025-08",
+    "line": "GE-Proton",
+    "profile": "default",
+    "reports": 3
+   }
+  },
   "umu-1491410": {
    "amd": {
     "fixes": [],
+    "last": "2026-01",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
@@ -573,6 +633,7 @@
   "umu-1522820": {
    "any": {
     "fixes": [],
+    "last": "2025-12",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -581,12 +642,14 @@
   "umu-1556200": {
    "any": {
     "fixes": [],
+    "last": "2026-03",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-03",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -595,6 +658,7 @@
   "umu-1580780": {
    "nvidia": {
     "fixes": [],
+    "last": "2026-05",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -603,18 +667,21 @@
   "umu-1583720": {
    "amd": {
     "fixes": [],
+    "last": "2026-03",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
    },
    "any": {
     "fixes": [],
+    "last": "2026-03",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 8
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-01",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -623,6 +690,7 @@
   "umu-1593500": {
    "intel": {
     "fixes": [],
+    "last": "2026-04",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -631,24 +699,28 @@
   "umu-1602010": {
    "amd": {
     "fixes": [],
+    "last": "2026-06",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 7
    },
    "any": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 13
    },
    "intel": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    },
    "nvidia": {
     "fixes": [],
+    "last": "2025-06",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -657,12 +729,14 @@
   "umu-1612770": {
    "any": {
     "fixes": [],
+    "last": "2025-09",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    },
    "nvidia": {
     "fixes": [],
+    "last": "2025-09",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -671,12 +745,14 @@
   "umu-1619310": {
    "any": {
     "fixes": [],
+    "last": "2026-01",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
    },
    "nvidia": {
     "fixes": [],
+    "last": "2025-11",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -685,12 +761,14 @@
   "umu-1621310": {
    "amd": {
     "fixes": [],
+    "last": "2026-02",
     "line": "GE-Proton",
     "profile": "nofsync",
     "reports": 3
    },
    "any": {
     "fixes": [],
+    "last": "2026-06",
     "line": "GE-Proton",
     "profile": "nofsync",
     "reports": 5
@@ -699,14 +777,23 @@
   "umu-1623940": {
    "amd": {
     "fixes": [],
+    "last": "2026-01",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
+   },
+   "any": {
+    "fixes": [],
+    "last": "2026-01",
+    "line": "GE-Proton",
+    "profile": "default",
+    "reports": 4
    }
   },
   "umu-1641960": {
    "nvidia": {
     "fixes": [],
+    "last": "2025-06",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 6
@@ -715,6 +802,7 @@
   "umu-1654660": {
    "amd": {
     "fixes": [],
+    "last": "2026-05",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -723,6 +811,7 @@
   "umu-1707990": {
    "any": {
     "fixes": [],
+    "last": "2026-04",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -731,6 +820,7 @@
   "umu-1729740": {
    "any": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -739,6 +829,7 @@
   "umu-17300": {
    "amd": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -747,12 +838,14 @@
   "umu-1781350": {
    "any": {
     "fixes": [],
+    "last": "2026-03",
     "line": "UMU-Proton",
     "profile": "wined3d",
     "reports": 4
    },
    "intel": {
     "fixes": [],
+    "last": "2026-03",
     "line": "UMU-Proton",
     "profile": "wined3d",
     "reports": 4
@@ -761,12 +854,14 @@
   "umu-1783190": {
    "amd": {
     "fixes": [],
+    "last": "2026-07",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
    },
    "any": {
     "fixes": [],
+    "last": "2026-07",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
@@ -775,12 +870,14 @@
   "umu-1799840": {
    "any": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -789,6 +886,7 @@
   "umu-1799930": {
    "nvidia": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -797,6 +895,7 @@
   "umu-1808680": {
    "nvidia": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -810,6 +909,7 @@
       "mfc42"
      ]
     ],
+    "last": "2026-10",
     "line": "UMU-Proton",
     "profile": "default",
     "reports": 4
@@ -821,6 +921,7 @@
       "mfc42"
      ]
     ],
+    "last": "2026-10",
     "line": "UMU-Proton",
     "profile": "default",
     "reports": 4
@@ -829,12 +930,14 @@
   "umu-1829980": {
    "amd": {
     "fixes": [],
+    "last": "2026-09",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 5
    },
    "any": {
     "fixes": [],
+    "last": "2026-09",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 5
@@ -843,12 +946,14 @@
   "umu-1845250": {
    "any": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 5
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
@@ -857,6 +962,7 @@
   "umu-1869500": {
    "amd": {
     "fixes": [],
+    "last": "2025-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -865,6 +971,7 @@
   "umu-1880610": {
    "amd": {
     "fixes": [],
+    "last": "2026-07",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 7
@@ -873,6 +980,7 @@
   "umu-1909950": {
    "amd": {
     "fixes": [],
+    "last": "2025-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -881,6 +989,7 @@
   "umu-1913370": {
    "nvidia": {
     "fixes": [],
+    "last": "2026-07",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -889,12 +998,14 @@
   "umu-1915550": {
    "amd": {
     "fixes": [],
+    "last": "2026-01",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    },
    "any": {
     "fixes": [],
+    "last": "2026-01",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -903,12 +1014,14 @@
   "umu-1920490": {
    "any": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 13
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 7
@@ -917,6 +1030,7 @@
   "umu-1928980": {
    "any": {
     "fixes": [],
+    "last": "2026-03",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 7
@@ -925,6 +1039,7 @@
   "umu-1939970": {
    "nvidia": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 7
@@ -933,18 +1048,21 @@
   "umu-1973530": {
    "amd": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 22
    },
    "any": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 46
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-06",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 19
@@ -953,20 +1071,37 @@
   "umu-1973710": {
    "amd": {
     "fixes": [],
+    "last": "2026-01",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 5
+   },
+   "any": {
+    "fixes": [],
+    "last": "2026-05",
+    "line": "GE-Proton",
+    "profile": "default",
+    "reports": 11
+   },
+   "nvidia": {
+    "fixes": [],
+    "last": "2026-05",
+    "line": "GE-Proton",
+    "profile": "default",
+    "reports": 6
    }
   },
   "umu-1978150": {
    "amd": {
     "fixes": [],
+    "last": "2025-11",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    },
    "any": {
     "fixes": [],
+    "last": "2025-11",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -975,6 +1110,7 @@
   "umu-1981610": {
    "any": {
     "fixes": [],
+    "last": "2025-03",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -983,6 +1119,7 @@
   "umu-1997660": {
    "any": {
     "fixes": [],
+    "last": "2026-03",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -991,14 +1128,25 @@
   "umu-19980": {
    "amd": {
     "fixes": [],
+    "last": "2026-07",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    }
   },
+  "umu-204450": {
+   "nvidia": {
+    "fixes": [],
+    "last": "2026-02",
+    "line": "GE-Proton",
+    "profile": "default",
+    "reports": 6
+   }
+  },
   "umu-2058180": {
    "nvidia": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 6
@@ -1007,18 +1155,21 @@
   "umu-2073620": {
    "amd": {
     "fixes": [],
+    "last": "2025-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 6
    },
    "any": {
     "fixes": [],
+    "last": "2025-11",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 12
    },
    "nvidia": {
     "fixes": [],
+    "last": "2025-11",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 6
@@ -1027,14 +1178,16 @@
   "umu-2074920": {
    "amd": {
     "fixes": [],
+    "last": "2026-09",
     "line": "GE-Proton",
     "profile": "default",
-    "reports": 20
+    "reports": 19
    }
   },
   "umu-2079120": {
    "amd": {
     "fixes": [],
+    "last": "2026-05",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -1043,18 +1196,21 @@
   "umu-2093940": {
    "amd": {
     "fixes": [],
+    "last": "2026-11",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 9
    },
    "any": {
     "fixes": [],
+    "last": "2026-11",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 15
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 6
@@ -1068,6 +1224,7 @@
       "PROTON_FORCE_LARGE_ADDRESS_AWARE"
      ]
     ],
+    "last": "2026-09",
     "line": "UMU-Proton",
     "profile": "default",
     "reports": 4
@@ -1076,28 +1233,23 @@
   "umu-2106810": {
    "any": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    }
   },
-  "umu-2124490": {
-   "nvidia": {
-    "fixes": [],
-    "line": "GE-Proton",
-    "profile": "default",
-    "reports": 19
-   }
-  },
   "umu-2130460": {
    "amd": {
     "fixes": [],
+    "last": "2026-05",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    },
    "any": {
     "fixes": [],
+    "last": "2026-05",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -1106,6 +1258,7 @@
   "umu-2131640": {
    "nvidia": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -1114,18 +1267,21 @@
   "umu-2144740": {
    "amd": {
     "fixes": [],
+    "last": "2026-05",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    },
    "any": {
     "fixes": [],
+    "last": "2026-05",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 6
    },
    "nvidia": {
     "fixes": [],
+    "last": "2025-12",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -1134,12 +1290,14 @@
   "umu-215280": {
    "amd": {
     "fixes": [],
+    "last": "2026-03",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    },
    "any": {
     "fixes": [],
+    "last": "2026-03",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 5
@@ -1148,12 +1306,14 @@
   "umu-2153330": {
    "amd": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    },
    "any": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -1162,18 +1322,21 @@
   "umu-216150": {
    "amd": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 13
    },
    "any": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 20
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 7
@@ -1182,20 +1345,14 @@
   "umu-2169930": {
    "amd": {
     "fixes": [],
+    "last": "2026-07",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    },
    "any": {
     "fixes": [],
-    "line": "GE-Proton",
-    "profile": "default",
-    "reports": 3
-   }
-  },
-  "umu-2178070": {
-   "any": {
-    "fixes": [],
+    "last": "2026-07",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -1204,6 +1361,7 @@
   "umu-219890": {
    "any": {
     "fixes": [],
+    "last": "2026-07",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -1212,6 +1370,7 @@
   "umu-2229940": {
    "nvidia": {
     "fixes": [],
+    "last": "2026-06",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -1220,12 +1379,14 @@
   "umu-223750": {
    "any": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 10
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-01",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 7
@@ -1234,6 +1395,7 @@
   "umu-223810": {
    "amd": {
     "fixes": [],
+    "last": "2026-07",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -1242,6 +1404,7 @@
   "umu-225640": {
    "any": {
     "fixes": [],
+    "last": "2025-11",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -1250,28 +1413,16 @@
   "umu-2273430": {
    "nvidia": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
-   }
-  },
-  "umu-2287330": {
-   "amd": {
-    "fixes": [],
-    "line": "GE-Proton",
-    "profile": "default",
-    "reports": 3
-   },
-   "any": {
-    "fixes": [],
-    "line": "GE-Proton",
-    "profile": "default",
-    "reports": 4
    }
   },
   "umu-2302530": {
    "any": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -1280,6 +1431,7 @@
   "umu-230290": {
    "nvidia": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
@@ -1288,18 +1440,21 @@
   "umu-2307350": {
    "amd": {
     "fixes": [],
+    "last": "2026-06",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 5
    },
    "any": {
     "fixes": [],
+    "last": "2026-06",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 9
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-06",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
@@ -1308,6 +1463,7 @@
   "umu-2365790": {
    "any": {
     "fixes": [],
+    "last": "2025-09",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -1316,6 +1472,7 @@
   "umu-240760": {
    "any": {
     "fixes": [],
+    "last": "2025-04",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -1324,6 +1481,7 @@
   "umu-241560": {
    "any": {
     "fixes": [],
+    "last": "2026-01",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
@@ -1332,6 +1490,7 @@
   "umu-2441700": {
    "nvidia": {
     "fixes": [],
+    "last": "2026-07",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -1340,44 +1499,51 @@
   "umu-244210": {
    "amd": {
     "fixes": [],
+    "last": "2026-11",
     "line": "GE-Proton",
     "profile": "default",
-    "reports": 54
+    "reports": 53
    },
    "any": {
     "fixes": [],
+    "last": "2026-11",
     "line": "GE-Proton",
     "profile": "default",
-    "reports": 110
+    "reports": 108
    },
    "intel": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 8
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
-    "reports": 48
+    "reports": 47
    }
   },
   "umu-244850": {
    "amd": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 24
    },
    "any": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 49
    },
    "intel": {
     "fixes": [],
+    "last": "2025-05",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -1386,6 +1552,7 @@
   "umu-2456740": {
    "nvidia": {
     "fixes": [],
+    "last": "2026-03",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 21
@@ -1394,6 +1561,7 @@
   "umu-2473480": {
    "any": {
     "fixes": [],
+    "last": "2026-06",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -1402,6 +1570,7 @@
   "umu-2487190": {
    "any": {
     "fixes": [],
+    "last": "2026-09",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -1410,6 +1579,7 @@
   "umu-24960": {
    "any": {
     "fixes": [],
+    "last": "2026-07",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 5
@@ -1418,6 +1588,7 @@
   "umu-250520": {
    "amd": {
     "fixes": [],
+    "last": "2026-11",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -1426,15 +1597,26 @@
   "umu-2507950": {
    "any": {
     "fixes": [],
+    "last": "2025-11",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 22
    },
    "nvidia": {
     "fixes": [],
+    "last": "2025-11",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 7
+   }
+  },
+  "umu-251110": {
+   "amd": {
+    "fixes": [],
+    "last": "2026-03",
+    "line": "GE-Proton",
+    "profile": "default",
+    "reports": 3
    }
   },
   "umu-252530": {
@@ -1445,6 +1627,7 @@
       "PROTON_FORCE_LARGE_ADDRESS_AWARE"
      ]
     ],
+    "last": "2026-03",
     "line": "UMU-Proton",
     "profile": "default",
     "reports": 3
@@ -1456,6 +1639,7 @@
       "PROTON_FORCE_LARGE_ADDRESS_AWARE"
      ]
     ],
+    "last": "2026-03",
     "line": "UMU-Proton",
     "profile": "default",
     "reports": 6
@@ -1467,6 +1651,7 @@
       "PROTON_FORCE_LARGE_ADDRESS_AWARE"
      ]
     ],
+    "last": "2025-12",
     "line": "UMU-Proton",
     "profile": "default",
     "reports": 3
@@ -1475,6 +1660,7 @@
   "umu-2527390": {
    "any": {
     "fixes": [],
+    "last": "2026-09",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -1488,6 +1674,7 @@
       "xact"
      ]
     ],
+    "last": "2026-06",
     "line": "UMU-Proton",
     "profile": "default",
     "reports": 3
@@ -1501,6 +1688,7 @@
       "PROTON_OLD_GL_STRING"
      ]
     ],
+    "last": "2025-08",
     "line": "UMU-Proton",
     "profile": "default",
     "reports": 4
@@ -1509,6 +1697,7 @@
   "umu-2655590": {
    "any": {
     "fixes": [],
+    "last": "2026-07",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -1517,6 +1706,7 @@
   "umu-2657560": {
    "any": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -1525,6 +1715,7 @@
   "umu-265930": {
    "any": {
     "fixes": [],
+    "last": "2026-04",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -1533,14 +1724,25 @@
   "umu-2666510": {
    "nvidia": {
     "fixes": [],
+    "last": "2025-06",
     "line": "UMU-Proton",
     "profile": "wined3d",
     "reports": 5
    }
   },
+  "umu-2668080": {
+   "amd": {
+    "fixes": [],
+    "last": "2026-06",
+    "line": "GE-Proton",
+    "profile": "default",
+    "reports": 9
+   }
+  },
   "umu-270110": {
    "any": {
     "fixes": [],
+    "last": "2025-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -1549,12 +1751,14 @@
   "umu-2719200": {
    "amd": {
     "fixes": [],
+    "last": "2025-12",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    },
    "any": {
     "fixes": [],
+    "last": "2025-12",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
@@ -1563,12 +1767,14 @@
   "umu-2737970": {
    "amd": {
     "fixes": [],
+    "last": "2026-06",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
    },
    "any": {
     "fixes": [],
+    "last": "2026-06",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
@@ -1577,12 +1783,14 @@
   "umu-2737980": {
    "amd": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
    },
    "any": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
@@ -1591,6 +1799,7 @@
   "umu-2750000": {
    "nvidia": {
     "fixes": [],
+    "last": "2025-02",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
@@ -1599,6 +1808,7 @@
   "umu-2767030": {
    "intel": {
     "fixes": [],
+    "last": "2026-01",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 11
@@ -1616,6 +1826,7 @@
       "vcrun2022"
      ]
     ],
+    "last": "2025-11",
     "line": "UMU-Proton",
     "profile": "default",
     "reports": 3
@@ -1631,6 +1842,7 @@
       "vcrun2022"
      ]
     ],
+    "last": "2026-01",
     "line": "UMU-Proton",
     "profile": "default",
     "reports": 5
@@ -1639,22 +1851,16 @@
   "umu-2795540": {
    "any": {
     "fixes": [],
+    "last": "2025-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    }
   },
-  "umu-2820110": {
-   "any": {
-    "fixes": [],
-    "line": "GE-Proton",
-    "profile": "default",
-    "reports": 4
-   }
-  },
   "umu-2821610": {
    "amd": {
     "fixes": [],
+    "last": "2026-04",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
@@ -1663,12 +1869,14 @@
   "umu-2825300": {
    "amd": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    },
    "any": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -1677,6 +1885,7 @@
   "umu-2827230": {
    "nvidia": {
     "fixes": [],
+    "last": "2025-07",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 5
@@ -1690,6 +1899,7 @@
       "PROTON_HIDE_NVIDIA_GPU"
      ]
     ],
+    "last": "2026-03",
     "line": "UMU-Proton",
     "profile": "default",
     "reports": 3
@@ -1701,26 +1911,23 @@
       "PROTON_HIDE_NVIDIA_GPU"
      ]
     ],
+    "last": "2026-03",
     "line": "UMU-Proton",
     "profile": "default",
     "reports": 3
    }
   },
   "umu-287290": {
-   "amd": {
-    "fixes": [],
-    "line": "GE-Proton",
-    "profile": "default",
-    "reports": 7
-   },
    "any": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
-    "reports": 12
+    "reports": 11
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 5
@@ -1729,12 +1936,14 @@
   "umu-2918310": {
    "amd": {
     "fixes": [],
+    "last": "2026-09",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    },
    "any": {
     "fixes": [],
+    "last": "2026-09",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
@@ -1743,6 +1952,7 @@
   "umu-292000": {
    "amd": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 6
@@ -1751,6 +1961,7 @@
   "umu-292030": {
    "intel": {
     "fixes": [],
+    "last": "2026-06",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
@@ -1759,6 +1970,7 @@
   "umu-2926900": {
    "amd": {
     "fixes": [],
+    "last": "2026-07",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -1767,26 +1979,14 @@
   "umu-294700": {
    "any": {
     "fixes": [],
+    "last": "2026-07",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    },
    "intel": {
     "fixes": [],
-    "line": "GE-Proton",
-    "profile": "default",
-    "reports": 3
-   }
-  },
-  "umu-2947250": {
-   "amd": {
-    "fixes": [],
-    "line": "GE-Proton",
-    "profile": "default",
-    "reports": 3
-   },
-   "any": {
-    "fixes": [],
+    "last": "2026-07",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -1795,14 +1995,7 @@
   "umu-2963870": {
    "any": {
     "fixes": [],
-    "line": "GE-Proton",
-    "profile": "default",
-    "reports": 3
-   }
-  },
-  "umu-300570": {
-   "any": {
-    "fixes": [],
+    "last": "2026-06",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -1811,12 +2004,14 @@
   "umu-3018410": {
    "amd": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    },
    "any": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -1825,6 +2020,7 @@
   "umu-3021100": {
    "amd": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -1833,12 +2029,14 @@
   "umu-3023930": {
    "amd": {
     "fixes": [],
+    "last": "2026-01",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 6
    },
    "any": {
     "fixes": [],
+    "last": "2026-01",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 6
@@ -1847,18 +2045,21 @@
   "umu-304240": {
    "amd": {
     "fixes": [],
+    "last": "2026-09",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 18
    },
    "any": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 31
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 13
@@ -1867,6 +2068,7 @@
   "umu-3050900": {
    "nvidia": {
     "fixes": [],
+    "last": "2026-05",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 8
@@ -1875,6 +2077,7 @@
   "umu-3052450": {
    "amd": {
     "fixes": [],
+    "last": "2026-07",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 5
@@ -1883,6 +2086,7 @@
   "umu-3054820": {
    "any": {
     "fixes": [],
+    "last": "2026-02",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -1891,12 +2095,14 @@
   "umu-3056840": {
    "any": {
     "fixes": [],
+    "last": "2026-05",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-05",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -1905,12 +2111,14 @@
   "umu-3061920": {
    "amd": {
     "fixes": [],
+    "last": "2026-05",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    },
    "any": {
     "fixes": [],
+    "last": "2026-05",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -1919,6 +2127,7 @@
   "umu-3065170": {
    "any": {
     "fixes": [],
+    "last": "2025-02",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -1932,6 +2141,7 @@
       "d3dcompiler_47"
      ]
     ],
+    "last": "2026-10",
     "line": "UMU-Proton",
     "profile": "default",
     "reports": 3
@@ -1943,6 +2153,7 @@
       "d3dcompiler_47"
      ]
     ],
+    "last": "2026-10",
     "line": "UMU-Proton",
     "profile": "default",
     "reports": 5
@@ -1951,6 +2162,7 @@
   "umu-3092530": {
    "nvidia": {
     "fixes": [],
+    "last": "2026-02",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 5
@@ -1959,12 +2171,14 @@
   "umu-3094010": {
    "amd": {
     "fixes": [],
+    "last": "2026-09",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 7
    },
    "any": {
     "fixes": [],
+    "last": "2026-09",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 7
@@ -1973,18 +2187,21 @@
   "umu-3104410": {
    "amd": {
     "fixes": [],
+    "last": "2025-12",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 5
    },
    "any": {
     "fixes": [],
+    "last": "2026-06",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 8
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-06",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -1993,12 +2210,14 @@
   "umu-311730": {
    "amd": {
     "fixes": [],
+    "last": "2026-02",
     "line": "UMU-Proton",
     "profile": "nofsync",
     "reports": 7
    },
    "any": {
     "fixes": [],
+    "last": "2026-06",
     "line": "UMU-Proton",
     "profile": "nofsync",
     "reports": 9
@@ -2012,6 +2231,7 @@
       "msxml6"
      ]
     ],
+    "last": "2026-08",
     "line": "UMU-Proton",
     "profile": "default",
     "reports": 4
@@ -2020,6 +2240,7 @@
   "umu-3142050": {
    "any": {
     "fixes": [],
+    "last": "2025-09",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
@@ -2028,12 +2249,14 @@
   "umu-3151760": {
    "amd": {
     "fixes": [],
+    "last": "2025-12",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    },
    "any": {
     "fixes": [],
+    "last": "2025-12",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -2042,12 +2265,14 @@
   "umu-3164330": {
    "any": {
     "fixes": [],
+    "last": "2026-09",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 35
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-09",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 21
@@ -2056,6 +2281,7 @@
   "umu-317400": {
    "any": {
     "fixes": [],
+    "last": "2025-11",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -2069,6 +2295,7 @@
       "vcrun2022"
      ]
     ],
+    "last": "2025-09",
     "line": "UMU-Proton",
     "profile": "default",
     "reports": 3
@@ -2077,12 +2304,14 @@
   "umu-3196500": {
    "amd": {
     "fixes": [],
+    "last": "2026-02",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    },
    "any": {
     "fixes": [],
+    "last": "2026-02",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -2091,6 +2320,7 @@
   "umu-3219030": {
    "nvidia": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 9
@@ -2099,30 +2329,35 @@
   "umu-3224770": {
    "amd": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 58
    },
    "any": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 159
    },
    "intel": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 27
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 71
    },
    "other": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -2131,6 +2366,7 @@
   "umu-32350": {
    "any": {
     "fixes": [],
+    "last": "2026-05",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -2139,6 +2375,7 @@
   "umu-3276050": {
    "amd": {
     "fixes": [],
+    "last": "2026-06",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -2152,6 +2389,7 @@
       "PROTON_ENABLE_NVAPI"
      ]
     ],
+    "last": "2026-06",
     "line": "UMU-Proton",
     "profile": "default",
     "reports": 3
@@ -2160,6 +2398,7 @@
   "umu-3287520": {
    "nvidia": {
     "fixes": [],
+    "last": "2026-05",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -2168,12 +2407,14 @@
   "umu-3308670": {
    "amd": {
     "fixes": [],
+    "last": "2026-01",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 10
    },
    "any": {
     "fixes": [],
+    "last": "2026-06",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 18
@@ -2182,12 +2423,14 @@
   "umu-331600": {
    "amd": {
     "fixes": [],
+    "last": "2026-03",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    },
    "any": {
     "fixes": [],
+    "last": "2026-03",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -2196,6 +2439,7 @@
   "umu-3316940": {
    "nvidia": {
     "fixes": [],
+    "last": "2026-07",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -2204,6 +2448,7 @@
   "umu-331750": {
    "amd": {
     "fixes": [],
+    "last": "2025-03",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -2212,6 +2457,7 @@
   "umu-333930": {
    "amd": {
     "fixes": [],
+    "last": "2026-05",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 6
@@ -2220,12 +2466,14 @@
   "umu-333980": {
    "amd": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 10
    },
    "any": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 13
@@ -2234,18 +2482,21 @@
   "umu-3347400": {
    "amd": {
     "fixes": [],
+    "last": "2026-06",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 13
    },
    "any": {
     "fixes": [],
+    "last": "2026-06",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 23
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-05",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 10
@@ -2254,6 +2505,7 @@
   "umu-3357960": {
    "nvidia": {
     "fixes": [],
+    "last": "2026-06",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 6
@@ -2262,18 +2514,21 @@
   "umu-339340": {
    "amd": {
     "fixes": [],
+    "last": "2026-07",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 14
    },
    "any": {
     "fixes": [],
+    "last": "2026-07",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 20
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-06",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 6
@@ -2282,12 +2537,14 @@
   "umu-3426150": {
    "any": {
     "fixes": [],
+    "last": "2026-05",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-05",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -2296,18 +2553,21 @@
   "umu-3448650": {
    "amd": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
    },
    "any": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 9
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 5
@@ -2316,14 +2576,32 @@
   "umu-345610": {
    "amd": {
     "fixes": [],
+    "last": "2026-09",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    }
   },
+  "umu-346010": {
+   "amd": {
+    "fixes": [],
+    "last": "2026-08",
+    "line": "GE-Proton",
+    "profile": "default",
+    "reports": 4
+   },
+   "any": {
+    "fixes": [],
+    "last": "2026-09",
+    "line": "GE-Proton",
+    "profile": "default",
+    "reports": 6
+   }
+  },
   "umu-346110": {
    "amd": {
     "fixes": [],
+    "last": "2026-09",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 7
@@ -2332,6 +2610,7 @@
   "umu-3468640": {
    "any": {
     "fixes": [],
+    "last": "2025-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -2340,12 +2619,14 @@
   "umu-3478050": {
    "amd": {
     "fixes": [],
+    "last": "2026-05",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    },
    "any": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 5
@@ -2354,12 +2635,14 @@
   "umu-3504560": {
    "any": {
     "fixes": [],
+    "last": "2025-12",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    },
    "nvidia": {
     "fixes": [],
+    "last": "2025-12",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -2368,12 +2651,14 @@
   "umu-3506110": {
    "amd": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    },
    "any": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
@@ -2382,20 +2667,32 @@
   "umu-3513350": {
    "nvidia": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 124
    }
   },
+  "umu-35140": {
+   "nvidia": {
+    "fixes": [],
+    "last": "2026-10",
+    "line": "GE-Proton",
+    "profile": "default",
+    "reports": 11
+   }
+  },
   "umu-353270": {
    "amd": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    },
    "any": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
@@ -2404,6 +2701,7 @@
   "umu-3655390": {
    "any": {
     "fixes": [],
+    "last": "2026-01",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -2412,12 +2710,14 @@
   "umu-3678970": {
    "amd": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 12
    },
    "any": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 20
@@ -2426,12 +2726,14 @@
   "umu-3681810": {
    "amd": {
     "fixes": [],
+    "last": "2025-11",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 26
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-05",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 16
@@ -2440,12 +2742,14 @@
   "umu-3712080": {
    "any": {
     "fixes": [],
+    "last": "2026-07",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 6
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-07",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 5
@@ -2459,6 +2763,7 @@
       "PROTON_HIDE_NVIDIA_GPU"
      ]
     ],
+    "last": "2026-04",
     "line": "UMU-Proton",
     "profile": "default",
     "reports": 4
@@ -2467,6 +2772,7 @@
   "umu-372000": {
    "any": {
     "fixes": [],
+    "last": "2025-05",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -2475,12 +2781,14 @@
   "umu-3730310": {
    "amd": {
     "fixes": [],
+    "last": "2025-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    },
    "any": {
     "fixes": [],
+    "last": "2025-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -2489,6 +2797,7 @@
   "umu-3755860": {
    "nvidia": {
     "fixes": [],
+    "last": "2026-09",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -2497,12 +2806,14 @@
   "umu-3839850": {
    "amd": {
     "fixes": [],
+    "last": "2025-09",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    },
    "any": {
     "fixes": [],
+    "last": "2025-09",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -2511,6 +2822,7 @@
   "umu-384190": {
    "amd": {
     "fixes": [],
+    "last": "2026-05",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -2519,12 +2831,14 @@
   "umu-3846830": {
    "amd": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    },
    "any": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 5
@@ -2533,6 +2847,7 @@
   "umu-3856460": {
    "nvidia": {
     "fixes": [],
+    "last": "2026-09",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -2541,12 +2856,14 @@
   "umu-386070": {
    "any": {
     "fixes": [],
+    "last": "2026-06",
     "line": "UMU-Proton",
     "profile": "wined3d",
     "reports": 4
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-06",
     "line": "UMU-Proton",
     "profile": "wined3d",
     "reports": 4
@@ -2555,12 +2872,14 @@
   "umu-392110": {
    "amd": {
     "fixes": [],
+    "last": "2025-03",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    },
    "any": {
     "fixes": [],
+    "last": "2026-03",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 9
@@ -2569,6 +2888,7 @@
   "umu-393080": {
    "nvidia": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -2577,12 +2897,14 @@
   "umu-3932890": {
    "any": {
     "fixes": [],
+    "last": "2026-11",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 10
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-11",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 8
@@ -2591,12 +2913,14 @@
   "umu-3937550": {
    "amd": {
     "fixes": [],
+    "last": "2026-03",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
    },
    "any": {
     "fixes": [],
+    "last": "2026-03",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 5
@@ -2605,6 +2929,7 @@
   "umu-3942480": {
    "any": {
     "fixes": [],
+    "last": "2026-04",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -2613,6 +2938,7 @@
   "umu-397540": {
    "intel": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -2621,12 +2947,14 @@
   "umu-4012810": {
    "amd": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 7
    },
    "any": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 10
@@ -2635,6 +2963,7 @@
   "umu-4025700": {
    "nvidia": {
     "fixes": [],
+    "last": "2026-04",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 5
@@ -2643,12 +2972,14 @@
   "umu-404540": {
    "amd": {
     "fixes": [],
+    "last": "2026-05",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    },
    "any": {
     "fixes": [],
+    "last": "2026-05",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -2657,12 +2988,14 @@
   "umu-4077800": {
    "any": {
     "fixes": [],
+    "last": "2026-06",
     "line": "UMU-Proton",
     "profile": "wined3d",
     "reports": 4
    },
    "intel": {
     "fixes": [],
+    "last": "2026-06",
     "line": "UMU-Proton",
     "profile": "wined3d",
     "reports": 4
@@ -2671,6 +3004,7 @@
   "umu-407810": {
    "any": {
     "fixes": [],
+    "last": "2025-04",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -2679,20 +3013,7 @@
   "umu-40800": {
    "nvidia": {
     "fixes": [],
-    "line": "GE-Proton",
-    "profile": "default",
-    "reports": 3
-   }
-  },
-  "umu-409000": {
-   "amd": {
-    "fixes": [],
-    "line": "GE-Proton",
-    "profile": "default",
-    "reports": 3
-   },
-   "any": {
-    "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -2701,6 +3022,7 @@
   "umu-4115450": {
    "amd": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 12
@@ -2709,18 +3031,21 @@
   "umu-4125930": {
    "amd": {
     "fixes": [],
+    "last": "2026-09",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 7
    },
    "any": {
     "fixes": [],
+    "last": "2026-09",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 15
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 6
@@ -2734,6 +3059,7 @@
       "mf"
      ]
     ],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -2742,6 +3068,7 @@
   "umu-415200": {
    "nvidia": {
     "fixes": [],
+    "last": "2025-12",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
@@ -2750,12 +3077,14 @@
   "umu-4177730": {
    "amd": {
     "fixes": [],
+    "last": "2026-07",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
    },
    "any": {
     "fixes": [],
+    "last": "2026-07",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
@@ -2764,20 +3093,23 @@
   "umu-418370": {
    "any": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
-    "reports": 26
+    "reports": 24
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
-    "reports": 17
+    "reports": 15
    }
   },
   "umu-4195920": {
    "any": {
     "fixes": [],
+    "last": "2025-12",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -2786,6 +3118,7 @@
   "umu-4212480": {
    "any": {
     "fixes": [],
+    "last": "2026-09",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -2794,6 +3127,7 @@
   "umu-4249130": {
    "any": {
     "fixes": [],
+    "last": "2026-02",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
@@ -2802,6 +3136,7 @@
   "umu-4291770": {
    "nvidia": {
     "fixes": [],
+    "last": "2026-02",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -2810,6 +3145,7 @@
   "umu-4317690": {
    "amd": {
     "fixes": [],
+    "last": "2026-09",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -2818,6 +3154,7 @@
   "umu-438100": {
    "intel": {
     "fixes": [],
+    "last": "2026-03",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -2826,6 +3163,7 @@
   "umu-44340": {
    "any": {
     "fixes": [],
+    "last": "2025-11",
     "line": "GE-Proton",
     "profile": "nofsync",
     "reports": 3
@@ -2839,6 +3177,7 @@
       "d3dcompiler_47"
      ]
     ],
+    "last": "2026-05",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -2847,6 +3186,7 @@
   "umu-450540": {
    "amd": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
@@ -2855,12 +3195,14 @@
   "umu-451780": {
    "amd": {
     "fixes": [],
+    "last": "2026-07",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    },
    "any": {
     "fixes": [],
+    "last": "2026-07",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
@@ -2869,6 +3211,7 @@
   "umu-454650": {
    "nvidia": {
     "fixes": [],
+    "last": "2026-07",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 7
@@ -2877,20 +3220,23 @@
   "umu-460120": {
    "amd": {
     "fixes": [],
+    "last": "2026-06",
     "line": "GE-Proton",
     "profile": "default",
-    "reports": 4
+    "reports": 3
    },
    "any": {
     "fixes": [],
+    "last": "2026-06",
     "line": "GE-Proton",
     "profile": "default",
-    "reports": 4
+    "reports": 3
    }
   },
   "umu-4623570": {
    "any": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -2899,6 +3245,7 @@
   "umu-4643090": {
    "any": {
     "fixes": [],
+    "last": "2026-09",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
@@ -2907,32 +3254,37 @@
   "umu-464450": {
    "amd": {
     "fixes": [],
+    "last": "2026-02",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    },
    "any": {
     "fixes": [],
+    "last": "2026-02",
     "line": "GE-Proton",
     "profile": "default",
-    "reports": 4
+    "reports": 3
    }
   },
   "umu-485510": {
    "amd": {
     "fixes": [],
+    "last": "2026-07",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 9
    },
    "any": {
     "fixes": [],
+    "last": "2026-07",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 14
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-07",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 5
@@ -2941,6 +3293,7 @@
   "umu-4891320": {
    "any": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -2949,6 +3302,16 @@
   "umu-4920": {
    "any": {
     "fixes": [],
+    "last": "2026-04",
+    "line": "GE-Proton",
+    "profile": "default",
+    "reports": 3
+   }
+  },
+  "umu-493340": {
+   "any": {
+    "fixes": [],
+    "last": "2026-07",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -2957,6 +3320,7 @@
   "umu-505170": {
    "any": {
     "fixes": [],
+    "last": "2026-02",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -2965,12 +3329,14 @@
   "umu-50620": {
    "amd": {
     "fixes": [],
+    "last": "2026-06",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 5
    },
    "any": {
     "fixes": [],
+    "last": "2026-06",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 6
@@ -2979,20 +3345,23 @@
   "umu-526870": {
    "intel": {
     "fixes": [],
+    "last": "2026-03",
     "line": "GE-Proton",
     "profile": "default",
-    "reports": 5
+    "reports": 4
    }
   },
   "umu-543900": {
    "amd": {
     "fixes": [],
+    "last": "2026-03",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    },
    "any": {
     "fixes": [],
+    "last": "2026-03",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
@@ -3001,12 +3370,14 @@
   "umu-551170": {
    "any": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -3015,18 +3386,21 @@
   "umu-567640": {
    "amd": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 12
    },
    "any": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 22
    },
    "other": {
     "fixes": [],
+    "last": "2026-05",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -3035,6 +3409,7 @@
   "umu-601050": {
    "any": {
     "fixes": [],
+    "last": "2026-02",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -3043,6 +3418,7 @@
   "umu-614570": {
    "amd": {
     "fixes": [],
+    "last": "2026-09",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -3051,20 +3427,30 @@
   "umu-622650": {
    "amd": {
     "fixes": [],
+    "last": "2025-11",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
    }
   },
   "umu-631510": {
+   "amd": {
+    "fixes": [],
+    "last": "2026-09",
+    "line": "GE-Proton",
+    "profile": "default",
+    "reports": 13
+   },
    "any": {
     "fixes": [],
+    "last": "2026-09",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 18
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-05",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 5
@@ -3073,20 +3459,23 @@
   "umu-633230": {
    "amd": {
     "fixes": [],
+    "last": "2026-11",
     "line": "GE-Proton",
     "profile": "default",
-    "reports": 6
+    "reports": 5
    },
    "any": {
     "fixes": [],
+    "last": "2026-11",
     "line": "GE-Proton",
     "profile": "default",
-    "reports": 7
+    "reports": 6
    }
   },
   "umu-65540": {
    "intel": {
     "fixes": [],
+    "last": "2025-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -3095,6 +3484,7 @@
   "umu-658260": {
    "amd": {
     "fixes": [],
+    "last": "2025-12",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -3103,6 +3493,7 @@
   "umu-674020": {
    "amd": {
     "fixes": [],
+    "last": "2025-01",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
@@ -3111,26 +3502,30 @@
   "umu-678950": {
    "amd": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 14
    },
    "any": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
-    "reports": 26
+    "reports": 24
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-04",
     "line": "GE-Proton",
     "profile": "default",
-    "reports": 10
+    "reports": 9
    }
   },
   "umu-682990": {
    "any": {
     "fixes": [],
+    "last": "2025-06",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -3139,6 +3534,7 @@
   "umu-700330": {
    "intel": {
     "fixes": [],
+    "last": "2026-05",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
@@ -3147,12 +3543,14 @@
   "umu-70400": {
    "any": {
     "fixes": [],
+    "last": "2026-06",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 7
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-06",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 5
@@ -3161,20 +3559,32 @@
   "umu-738060": {
    "any": {
     "fixes": [],
+    "last": "2025-07",
     "line": "UMU-Proton",
     "profile": "wined3d",
     "reports": 4
    },
    "intel": {
     "fixes": [],
+    "last": "2025-07",
     "line": "UMU-Proton",
     "profile": "wined3d",
+    "reports": 3
+   }
+  },
+  "umu-738520": {
+   "amd": {
+    "fixes": [],
+    "last": "2026-04",
+    "line": "GE-Proton",
+    "profile": "default",
     "reports": 3
    }
   },
   "umu-754530": {
    "any": {
     "fixes": [],
+    "last": "2026-02",
     "line": "UMU-Proton",
     "profile": "wined3d",
     "reports": 3
@@ -3183,6 +3593,7 @@
   "umu-757210": {
    "any": {
     "fixes": [],
+    "last": "2026-05",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -3191,12 +3602,14 @@
   "umu-761600": {
    "amd": {
     "fixes": [],
+    "last": "2026-09",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 6
    },
    "any": {
     "fixes": [],
+    "last": "2026-09",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 7
@@ -3205,6 +3618,7 @@
   "umu-767320": {
    "any": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -3213,6 +3627,16 @@
   "umu-801550": {
    "any": {
     "fixes": [],
+    "last": "2026-02",
+    "line": "GE-Proton",
+    "profile": "default",
+    "reports": 3
+   }
+  },
+  "umu-8080": {
+   "amd": {
+    "fixes": [],
+    "last": "2026-06",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -3221,6 +3645,7 @@
   "umu-808910": {
    "any": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -3229,6 +3654,7 @@
   "umu-813230": {
    "intel": {
     "fixes": [],
+    "last": "2025-02",
     "line": "GE-Proton",
     "profile": "wined3d",
     "reports": 3
@@ -3237,12 +3663,14 @@
   "umu-816020": {
    "amd": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    },
    "any": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -3251,12 +3679,14 @@
   "umu-835570": {
    "any": {
     "fixes": [],
+    "last": "2026-05",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 8
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-02",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 5
@@ -3265,12 +3695,14 @@
   "umu-838380": {
    "amd": {
     "fixes": [],
+    "last": "2026-02",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    },
    "any": {
     "fixes": [],
+    "last": "2026-05",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 5
@@ -3279,12 +3711,14 @@
   "umu-866020": {
    "any": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-08",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -3293,12 +3727,14 @@
   "umu-888790": {
    "amd": {
     "fixes": [],
+    "last": "2026-07",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 5
    },
    "any": {
     "fixes": [],
+    "last": "2026-07",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 7
@@ -3307,18 +3743,21 @@
   "umu-893180": {
    "amd": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
-    "reports": 14
+    "reports": 13
    },
    "any": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
-    "reports": 20
+    "reports": 19
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-10",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 6
@@ -3327,26 +3766,30 @@
   "umu-922500": {
    "amd": {
     "fixes": [],
+    "last": "2026-02",
     "line": "GE-Proton",
     "profile": "default",
-    "reports": 8
+    "reports": 6
    },
    "any": {
     "fixes": [],
+    "last": "2026-02",
     "line": "GE-Proton",
     "profile": "default",
-    "reports": 8
+    "reports": 6
    }
   },
   "umu-9350": {
    "any": {
     "fixes": [],
+    "last": "2026-01",
     "line": "UMU-Proton",
     "profile": "nofsync",
     "reports": 5
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-01",
     "line": "UMU-Proton",
     "profile": "nofsync",
     "reports": 3
@@ -3355,12 +3798,14 @@
   "umu-9420": {
    "amd": {
     "fixes": [],
+    "last": "2026-01",
     "line": "UMU-Proton",
     "profile": "nofsync",
     "reports": 4
    },
    "any": {
     "fixes": [],
+    "last": "2026-02",
     "line": "UMU-Proton",
     "profile": "nofsync",
     "reports": 7
@@ -3369,12 +3814,14 @@
   "umu-970500": {
    "any": {
     "fixes": [],
+    "last": "2026-01",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
    },
    "nvidia": {
     "fixes": [],
+    "last": "2026-01",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 4
@@ -3383,6 +3830,7 @@
   "umu-973760": {
    "any": {
     "fixes": [],
+    "last": "2026-06",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 6
@@ -3391,6 +3839,7 @@
   "umu-973810": {
    "nvidia": {
     "fixes": [],
+    "last": "2026-06",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
@@ -3399,12 +3848,14 @@
   "umu-999020": {
    "amd": {
     "fixes": [],
+    "last": "2026-02",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
    },
    "any": {
     "fixes": [],
+    "last": "2026-02",
     "line": "GE-Proton",
     "profile": "default",
     "reports": 3
