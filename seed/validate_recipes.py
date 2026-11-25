@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""A recipes.json ellenőrzése (a recipes Action futtatja minden változásnál, és PR-nál is).
+"""Checks recipes.json (the recipes Action runs it on every change, and on pull requests too).
 
-A szabályok ugyanazok, mint a Sloth OS gépeken (sloth-os repó: files/system/usr/lib/sloth-os/common/
-sloth_common/apps/recipes.py, abból másolva): csak engedélyezett mezők és értékek lehetnek benne, tetszőleges
-parancs, környezeti változó, paraméter vagy DLL-betöltés nem. Ha ott változik, ezt is frissíteni kell.
+The rules are the same as on Sloth OS machines (sloth-os repository: files/system/usr/lib/sloth-os/common/
+sloth_common/apps/recipes.py, copied from there): only allowed fields and values, no arbitrary command,
+environment variable, argument or DLL loading. If it changes there, this has to be updated too.
 
   python3 seed/validate_recipes.py recipes.json
 """
@@ -11,8 +11,8 @@ import json
 import re
 import sys
 
-# Ugyanazok az összetevők és kapcsolók, mint a közös tudásban (services/knowledge/src/worker.js); ha ott
-# bővül, itt is kell (és a knowledge repó seed/validate_recipes.py-jában)
+# The same components and switches as in the shared knowledge (services/knowledge/src/worker.js); if that list
+# grows, this one has to as well
 ALLOWED_VERBS = {
     "d3dcompiler_42", "d3dcompiler_43", "d3dcompiler_46", "d3dcompiler_47", "d3dx10", "d3dx11_42", "d3dx11_43",
     "d3dx9", "dotnet48", "gdiplus", "mf", "mfc42", "msxml3", "msxml4", "msxml6", "physx", "riched20", "vb6run",
@@ -23,10 +23,10 @@ ALLOWED_ENV = {
     "PROTON_HEAP_DELAY_FREE", "PROTON_NO_D3D11", "PROTON_NO_D3D10", "PROTON_OLD_GL_STRING", "PROTON_NO_WRITE_WATCH",
     "PROTON_NO_FSYNC", "PROTON_NO_ESYNC",
 }
-# Programparaméterek: csak a bevált, ártalmatlan kapcsolók (a böngészőmotorok GPU-ja, frissítő kihagyása)
+# Program arguments: only tried, harmless switches (the browser engines' GPU, skipping an updater)
 ALLOWED_ARGS = {"--disable-gpu", "-opengl", "-SkipBuildPatchPrereq", "/runWithoutUpdating", "/deelevated",
                 "--in-process-gpu", "--disable-gpu-sandbox"}
-# DLL-kikapcsolás (=d) vagy a beépített változat (=b); natív DLL betöltését recept nem kérheti
+# Turning a DLL off (=d) or the built-in version (=b); a recipe cannot ask for a native DLL
 _DLL = re.compile(r"^[a-z0-9_.-]{1,40}=(d|b)$")
 _EXE = re.compile(r"^[a-z0-9 ._()+*?\[\]-]{1,80}$")
 _ID = re.compile(r"^[a-z0-9-]{1,40}$")
@@ -35,7 +35,7 @@ _PER_EXE_KEYS = {"verbs", "env", "args", "dll_overrides"}
 
 
 def _rel_ok(path, allow_up=False):
-    """Relatív út a Windows-környezeten belül (a „..” csak a kliens keresésénél, egy szinttel feljebb)."""
+    """A relative path inside the Windows environment ("..": only for finding the client, one level up)."""
     if not isinstance(path, str) or not path or len(path) > 200 or path.startswith(("/", "\\")) or ":" in path:
         return False
     parts = re.split(r"[\\/]", path)
@@ -53,7 +53,7 @@ def _settings_ok(d):
 
 
 def validate(recipe):
-    """Igaz, ha a recept minden mezője megengedett. (A knowledge repó ellenőrzője ugyanezt nézi.)"""
+    """True if every field of the recipe is allowed. (The Sloth OS machines check the same.)"""
     try:
         if not isinstance(recipe, dict) or not set(recipe) <= _KEYS or not _ID.match(recipe.get("id", "")):
             return False
@@ -86,16 +86,16 @@ def main(path):
     data = json.load(open(path, encoding="utf-8"))
     errors = []
     if data.get("version") != 1 or not isinstance(data.get("recipes"), list):
-        errors.append("a fájl szerkezete hibás (version: 1, recipes: [...])")
+        errors.append("the file's structure is wrong (version: 1, recipes: [...])")
     if not re.match(r"^\d{4}-\d{2}-\d{2}$", str(data.get("updated", ""))):
-        errors.append("hiányzik vagy hibás az updated mező (ÉÉÉÉ-HH-NN): a gépek ebből látják, melyik az újabb")
+        errors.append("the updated field (YYYY-MM-DD) is missing or wrong: the machines see from it which one is newer")
     ids = [r.get("id") for r in data.get("recipes", []) if isinstance(r, dict)]
-    errors += [f"kétszer szerepel: {i}" for i in sorted({i for i in ids if ids.count(i) > 1})]
-    errors += [f"érvénytelen recept: {r.get('id') if isinstance(r, dict) else r}"
+    errors += [f"listed twice: {i}" for i in sorted({i for i in ids if ids.count(i) > 1})]
+    errors += [f"invalid recipe: {r.get('id') if isinstance(r, dict) else r}"
                for r in data.get("recipes", []) if not validate(r)]
     for e in errors:
-        print("HIBA:", e)
-    print(f"{len(ids)} recept, {len(errors)} hiba")
+        print("ERROR:", e)
+    print(f"{len(ids)} recipes, {len(errors)} errors")
     return 1 if errors else 0
 
 

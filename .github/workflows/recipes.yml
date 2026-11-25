@@ -1,5 +1,5 @@
-# A receptek (recipes.json) ellenőrzése minden változásnál és PR-nál: csak engedélyezett mezők és értékek
-# lehetnek benne (seed/validate_recipes.py, ugyanazok a szabályok, mint a Sloth OS gépeken).
+# Checking the recipes (recipes.json) on every change and pull request: only allowed fields and values can be in it
+# (seed/validate_recipes.py, the same rules as on Sloth OS machines).
 name: recipes
 
 on:
@@ -22,5 +22,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Receptek ellenőrzése
+      - name: Check the recipes
         run: python3 seed/validate_recipes.py recipes.json

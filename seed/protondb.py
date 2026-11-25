@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
-"""A ProtonDB nyílt adataiból (ODbL, https://github.com/bdefore/protondb-data) a Sloth OS közös tudásának
-alapja: játékonként és GPU-gyártónként az a beállítás, amivel a beszámolók szerint működik.
+"""The base of Sloth OS's shared knowledge, from ProtonDB's open data (ODbL, https://github.com/bdefore/protondb-data):
+per game and GPU vendor, the setting the reports say it works with.
 
-Csak a gépileg rögzített mezőket használjuk (Proton-változat, indítási kapcsolók, indítási beállítások),
-és a jegyzetekből csak az engedélyezett winetricks-összetevők nevét. Csak az engedélyezett beállítások
-kerülhetnek ki (ugyanazok, mint a Sloth OS .exe kezelőjében: sloth_exe/community.py).
-Csak akkor veszünk fel egy játékot, ha a legtöbbször bevált beállítás nem az alapértelmezett
-(különben a Sloth OS amúgy is azzal kezd), és legalább MIN_REPORTS beszámoló támasztja alá.
+Only the machine-recorded fields are used (the Proton variant, launch flags, launch options), and from the notes
+only the names of the allowed winetricks components. Only allowed settings can get out (the same as in Sloth OS's
+.exe handler: sloth_exe/community.py). A game is listed only if the setting that worked most often is not the
+default one (Sloth OS starts with that anyway), and at least MIN_REPORTS reports back it up.
 
-Használat: protondb.py <reports_piiremoved.json> <kimenet.json>
+Each entry also says how many reports back it ("reports") and the month of the newest one ("last", "2026-09"):
+Sloth Center shows it as "worked for 12 players, last confirmed in September 2026".
+
+Usage: protondb.py <reports_piiremoved.json> <output.json>
 """
 import collections
 import json
@@ -16,10 +18,10 @@ import re
 import sys
 import time
 
-YEARS = 2            # csak a friss beszámolók (a Proton sokat változik)
+YEARS = 2            # only recent reports (Proton changes a lot)
 MIN_REPORTS = 3
 
-# ProtonDB launchFlagsUsed -> Proton környezeti változó
+# ProtonDB launchFlagsUsed -> Proton environment variable
 FLAG_ENV = {
     "enableNvapi": "PROTON_ENABLE_NVAPI", "hideNvidia": "PROTON_HIDE_NVIDIA_GPU",
     "largeAddressAware": "PROTON_FORCE_LARGE_ADDRESS_AWARE", "heapDelayFree": "PROTON_HEAP_DELAY_FREE",
@@ -49,7 +51,7 @@ def gpu_vendor(text):
 
 
 def config(r):
-    """Egy működő beszámoló beállítása a mi formánkban, vagy None (natív Linux / ismeretlen)."""
+    """A working report's setting in our form, or None (a native Linux version / unknown)."""
     variant = r.get("variant")
     if variant == "native" or not variant:
         return None
@@ -74,13 +76,14 @@ def config(r):
     return line, profile, tuple(sorted(fixes))
 
 
-def main(src, dst):
-    cut = time.time() - YEARS * 365 * 86400
-    with open(src, encoding="utf-8") as f:
-        reports = json.load(f)
-    counts = collections.defaultdict(collections.Counter)   # (appid, gpu) -> config -> beszámolók
+def summarize(reports, now=None):
+    """The reports -> {"umu-<appid>": {gpu: {line, profile, fixes, reports, last}}}."""
+    cut = (now or time.time()) - YEARS * 365 * 86400
+    counts = collections.defaultdict(collections.Counter)   # (appid, gpu) -> config -> reports
+    newest = collections.defaultdict(int)                   # (appid, gpu, config) -> newest report's time
     for x in reports:
-        if x.get("timestamp", 0) < cut:
+        stamp = x.get("timestamp", 0)
+        if stamp < cut:
             continue
         r = x.get("responses") or {}
         if r.get("verdict") != "yes" or r.get("startsPlay") == "no":
@@ -92,21 +95,30 @@ def main(src, dst):
         if not cfg:
             continue
         gpu = gpu_vendor((x.get("systemInfo") or {}).get("gpu"))
-        counts[(appid, gpu)][cfg] += 1
-        counts[(appid, "any")][cfg] += 1
+        for g in (gpu, "any"):
+            counts[(appid, g)][cfg] += 1
+            newest[(appid, g, cfg)] = max(newest[(appid, g, cfg)], int(stamp))
     games = {}
     for (appid, gpu), counter in counts.items():
-        (line, profile, fixes), n = counter.most_common(1)[0]
-        if n < MIN_REPORTS or (line, profile, fixes) == ("UMU-Proton", "default", ()):
+        cfg, n = counter.most_common(1)[0]
+        line, profile, fixes = cfg
+        if n < MIN_REPORTS or cfg == ("UMU-Proton", "default", ()):
             continue
         games.setdefault(f"umu-{appid}", {})[gpu] = {
-            "line": line, "profile": profile, "fixes": [list(f) for f in fixes], "reports": n}
+            "line": line, "profile": profile, "fixes": [list(f) for f in fixes], "reports": n,
+            "last": time.strftime("%Y-%m", time.gmtime(newest[(appid, gpu, cfg)]))}
+    return games
+
+
+def main(src, dst):
+    with open(src, encoding="utf-8") as f:
+        games = summarize(json.load(f))
     out = {"source": "ProtonDB (https://www.protondb.com), Open Database License (ODbL) 1.0",
            "games": dict(sorted(games.items(), key=lambda kv: int(kv[0][4:])))}
     with open(dst, "w", encoding="utf-8") as f:
         json.dump(out, f, indent=None, separators=(",", ":"), sort_keys=True)
         f.write("\n")
-    print(f"{len(games)} játék")
+    print(f"{len(games)} games")
 
 
 if __name__ == "__main__":

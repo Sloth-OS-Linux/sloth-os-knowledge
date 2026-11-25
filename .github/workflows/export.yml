@@ -1,5 +1,6 @@
-# A közös tudás összesítésének frissítése a Sloth OS knowledge szolgáltatásból (óránként).
-# Titkok: EXPORT_URL (https://<worker>/v1/export) és EXPORT_TOKEN.
+# The shared knowledge's summary from the Sloth OS knowledge service (hourly): the settings that worked on Sloth OS
+# machines (programs) and the ones reported not to work anymore (disputed).
+# Secrets: EXPORT_URL (https://<worker>/v1/export) and EXPORT_TOKEN.
 name: export
 
 on:
@@ -22,19 +23,19 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: Összesítés letöltése
+      - name: Download the summary
         env:
           EXPORT_URL: ${{ secrets.EXPORT_URL }}
           EXPORT_TOKEN: ${{ secrets.EXPORT_TOKEN }}
         run: |
           if [ -z "$EXPORT_URL" ] || [ -z "$EXPORT_TOKEN" ]; then
-            echo "A titkok még nincsenek beállítva, kihagyva."
+            echo "The secrets are not set yet, skipped."
             exit 0
           fi
           curl -fsS --retry 3 --max-time 60 -H "Authorization: Bearer $EXPORT_TOKEN" "$EXPORT_URL" -o new.json
-          # csak érvényes, várt szerkezetű fájl kerülhet ki (a gépek ezt töltik le)
+          # only a valid file of the expected shape can go out (the machines download it)
           jq -e '.version == 1 and (.programs | type == "object")' new.json > /dev/null
-          # a ProtonDB-ből összesített játékok (games.json, havonta frissül) mellé
+          # next to the games summarized from ProtonDB (games.json, updated monthly)
           if [ -f games.json ]; then
             jq -S --indent 1 -s '.[0] + .[1]' new.json games.json > knowledge.json
           else
@@ -42,15 +43,15 @@ jobs:
           fi
           rm new.json
 
-      - name: Commit, ha változott (és havonta életjel, hogy a GitHub ne kapcsolja ki az ütemezést)
+      - name: Commit if it changed (and a monthly heartbeat, so GitHub keeps the schedule on)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if ! git diff --quiet knowledge.json; then
             git add knowledge.json
-            git commit -m "Közös tudás frissítése"
+            git commit -m "Shared knowledge updated"
             git push
           elif [ $(( $(date +%s) - $(git log -1 --format=%ct) )) -gt $(( 30 * 86400 )) ]; then
-            git commit --allow-empty -m "Életjel (az ütemezett frissítés aktív marad)"
+            git commit --allow-empty -m "Heartbeat (keeps the scheduled update active)"
             git push
           fi
